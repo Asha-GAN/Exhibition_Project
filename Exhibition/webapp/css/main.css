@@ -1,0 +1,140 @@
+/* 기본 세팅 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 메뉴버튼(햄버거) */
+.navbar {
+    z-index: 2;
+    display: flex;
+    position: fixed;
+    background-color: #AAA111;
+    padding: 10px;
+    width: 100%;
+}
+
+.menu-trigger {
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    width: 30px;
+    margin-left: 90%;
+}
+
+.menu-trigger span {
+    display: block;
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 4px;
+    border-radius: 4px;
+    margin: 5.5px 0;
+    transition: 0.5s;
+}
+
+.menu-trigger:hover span:nth-child(1) {
+  background-color: antiquewhite;
+}
+
+.menu-trigger:hover span:nth-child(2) {
+  background-color: antiquewhite;
+}
+
+.menu-trigger:hover span:nth-child(3) {
+  background-color: antiquewhite;
+}
+
+.menu-trigger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(-45deg);
+}
+
+.menu-trigger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-trigger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(45deg);
+}
+
+/* 사이드바 */
+.sidebar-container {
+    position: relative;
+}
+
+.sibebar {
+    z-index: 11;
+    display: none;
+    position: fixed;
+    background-color: #AAA111;
+    color: white;
+    width: 10%;
+    height: 100vh;
+    top: 50px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sibebar li {
+    padding: 10px;
+}
+
+.sibebar a {
+    text-decoration: none;
+    color: white;
+}
+
+/* 사이드바 오버레이 */
+.overlay {
+    z-index: 10;
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 90%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.sibebar.open, .overlay.open {
+    right: 0;
+    display: block;
+}
+
+/* 본문 */
+.text {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    padding-top: 75px;
+}
+
+.text * {
+    margin: auto;
+    text-align: center;
+}
+
+.subheading, .logo {
+    margin-top: 1%;
+}
+
+.circle {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    background-color: #D9D9D9;
+    margin-top: 5%;
+}
+
+.text > .circle:nth-of-type(2) {
+    margin-left: 40%;
+}
+
+/* footer */
+.footer {
+    position: relative;
+    display: inline-block;
+    background-color: #D9D9D9;
+    width: 100%;
+    height: 300px;
+}
